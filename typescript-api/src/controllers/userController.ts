@@ -1,26 +1,42 @@
-import { getManager } from 'typeorm';
 import { User } from '../entity/User';
+import { Request, Response } from 'express';
+import UserServices from '../services/userService';
 
+const ERROR_MESSAGE = 'error interno';
+const userService = new UserServices;
 export class UserController {
-  async saveUser(usuario: User) {
-    const savedUser = await getManager().save(usuario);
-    return savedUser;
+
+  async saveUser(req: Request, res: Response) {
+    try {
+      const { nome, email }: { nome: string, email: string } = req.body;
+      const user = new User(nome, email);
+      const savedUser = await userService.saveUser(user, email);
+      if (savedUser === false) {
+        return res.status(406).json({ message: 'Email already exists' });
+      }
+      return res.status(201).json(savedUser);
+    } catch (err) {
+      return res.status(500).json({ message: ERROR_MESSAGE });
+    };
   };
 
-  async getAllUser() {
-    const user = await getManager().find(User);
-    return user;
+  async getAllUser(_req: Request, res: Response) {
+    try {
+      const users = await userService.getAllUser();
+      return res.status(200).json(users);
+    } catch (err) {
+      return res.status(500).json({ message: ERROR_MESSAGE });
+    };
   };
 
-  async getById(id: number) {
-    const user = await getManager().findOne(User, id)
-    return user;
-  }
+  async getLauchFromUser(req: Request, res: Response) {
+    try {
+      const idUsuario = Number(req.params.id);
+      const lancamentos = await userService.getLauchFromUser(idUsuario);
+      return res.status(200).json(lancamentos);
+    } catch (err) {
+      return res.status(500).json({ message: ERROR_MESSAGE });
+    };
+  };
 
-  async getLauchFromUser(id: number) {
-    const usuario = await getManager().findOne(User, id, {
-      relations: ['lancamento']
-    });
-    return usuario;
-  }
 };

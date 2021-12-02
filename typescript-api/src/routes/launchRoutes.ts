@@ -1,15 +1,15 @@
 import { Router } from 'express';
 import { LaunchController } from '../controllers/launchController';
-import { UserController } from '../controllers/userController';
+import UserModel from '../models/userModel';
 import { Launch } from '../entity/Launch';
 
 const router = Router();
 const launchController = new LaunchController;
-const userController = new UserController;
+const userModel = new UserModel;
 
 router.post('/', async (req, res) => {
   const { idUsuario, valor, descricao, data } = req.body;
-  const user = await userController.getById(idUsuario);
+  const user = await userModel.getById(idUsuario);
 
   if (user) {
     const launch = new Launch(valor, descricao, data, user);
