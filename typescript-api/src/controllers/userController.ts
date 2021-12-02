@@ -1,4 +1,3 @@
-import { User } from '../entity/User';
 import { Request, Response } from 'express';
 import UserServices from '../services/userService';
 

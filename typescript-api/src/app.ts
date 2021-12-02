@@ -16,4 +16,4 @@ connection();
 
 app.use('/usuario', userRoutes);
 app.use('/lancamento', lauchRoutes);
-app.use('/', (req, res) => res.send('API typeScript') )
+app.use('/', (_req, res) => res.send('API typeScript') )
