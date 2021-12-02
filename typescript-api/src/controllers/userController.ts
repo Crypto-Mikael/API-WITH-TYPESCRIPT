@@ -4,7 +4,7 @@ import UserServices from '../services/userService';
 
 const ERROR_MESSAGE = 'error interno';
 const userService = new UserServices;
-export class UserController {
+class UserController {
 
   async saveUser(req: Request, res: Response) {
     try {
@@ -40,3 +40,5 @@ export class UserController {
   };
 
 };
+
+export default UserController;

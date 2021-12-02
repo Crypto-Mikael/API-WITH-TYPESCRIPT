@@ -1,9 +1,24 @@
-import { getManager } from 'typeorm';
-import { Launch } from '../entity/Launch';
+import UserModel from '../models/userModel';
+import LaunchService from '../services/launchService';
+
+const launchService = new LaunchService;
+const userModel = new UserModel;
+const ERROR_MESSAGE = 'error interno';
 
 export class LaunchController {
-  async saveLauch(lancamento: Launch) {
-    const savedLauch = getManager().save(lancamento);
-    return savedLauch;
-  }
+
+  async saveLauch(req, res) {
+    try {
+      const { idUsuario, valor, descricao, data }:
+      { idUsuario: number, descricao: string, valor: number, data: Date } = req.body;
+      const savedLaunch = await launchService.saveLauch(idUsuario, valor, descricao, data);
+      if (savedLaunch === false) {
+        return res.status(404).json({ message: 'Lauch user not found'})
+      }
+      return res.status(201).json(savedLaunch);
+    } catch (err) {
+      return res.status(500).json({ message: ERROR_MESSAGE})
+    };
+  };
+
 }
