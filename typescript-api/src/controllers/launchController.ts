@@ -1,13 +1,12 @@
-import UserModel from '../models/userModel';
+import { Request, Response } from 'express';
 import LaunchService from '../services/launchService';
 
 const launchService = new LaunchService;
-const userModel = new UserModel;
 const ERROR_MESSAGE = 'error interno';
 
-export class LaunchController {
+class LaunchController {
 
-  async saveLauch(req, res) {
+  async saveLauch(req: Request, res: Response) {
     try {
       const { idUsuario, valor, descricao, data }:
       { idUsuario: number, descricao: string, valor: number, data: Date } = req.body;
@@ -22,3 +21,5 @@ export class LaunchController {
   };
 
 }
+
+export default LaunchController;

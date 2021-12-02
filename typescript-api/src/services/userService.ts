@@ -5,9 +5,10 @@ const userModel = new UserModel;
 
 class UserServices {
 
-  async saveUser(usuario: User, email: string) {
+  async saveUser(nome: string, email: string) {
     const userAlreadyExists = await userModel.getByEmail(email);
     if (userAlreadyExists) return false;
+    const usuario = new User(nome, email);
     const user = await userModel.saveUser(usuario);
     return user;
   };

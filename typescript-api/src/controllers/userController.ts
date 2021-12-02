@@ -9,8 +9,7 @@ class UserController {
   async saveUser(req: Request, res: Response) {
     try {
       const { nome, email }: { nome: string, email: string } = req.body;
-      const user = new User(nome, email);
-      const savedUser = await userService.saveUser(user, email);
+      const savedUser = await userService.saveUser(nome, email);
       if (savedUser === false) {
         return res.status(406).json({ message: 'Email already exists' });
       }
