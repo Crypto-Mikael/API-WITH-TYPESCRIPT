@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { LaunchController } from '../controller/launchController';
-import { UserController } from '../controller/userController';
+import { LaunchController } from '../controllers/launchController';
+import { UserController } from '../controllers/userController';
 import { Launch } from '../entity/Launch';
 
 const router = Router();
