@@ -23,6 +23,6 @@ export class Launch {
   @Column()
   data: Date;
 
-  @ManyToOne(() => User)
+  @ManyToOne(() => User, { onDelete: 'CASCADE' })
   usuario: User;
 };

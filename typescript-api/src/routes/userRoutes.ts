@@ -11,4 +11,8 @@ router.get('/', userController.getAllUser);
 
 router.get('/lancamentos/:id', userController.getLauchFromUser);
 
+router.delete('/:id', userController.deleteUserById);
+
+router.put('/:id', userController.updateUserById);
+
 export default router;

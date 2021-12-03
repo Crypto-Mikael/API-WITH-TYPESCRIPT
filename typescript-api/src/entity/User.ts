@@ -18,6 +18,6 @@ export class User {
     @Column()
     email: string;
 
-    @OneToMany(() => Launch, lancamento => lancamento.usuario)
+    @OneToMany(() => Launch, lancamento => lancamento.usuario, { onDelete: 'CASCADE' })
     lancamento: Launch[];
 }
