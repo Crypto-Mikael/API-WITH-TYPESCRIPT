@@ -12,7 +12,7 @@ class LaunchController {
       { idUsuario: number, descricao: string, valor: number, data: Date } = req.body;
       const savedLaunch = await launchService.saveLauch(idUsuario, valor, descricao, data);
       if (savedLaunch === false) {
-        return res.status(404).json({ message: 'Lauch user not found'})
+        return res.status(404).json({ message: 'User not found'})
       }
       return res.status(201).json(savedLaunch);
     } catch (err) {
