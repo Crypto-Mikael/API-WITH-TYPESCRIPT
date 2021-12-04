@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import LaunchService from '../services/launchService';
 
 const launchService = new LaunchService;
-const ERROR_MESSAGE = 'error interno';
+const ERROR_MESSAGE = 'Internal error';
 
 class LaunchController {
 

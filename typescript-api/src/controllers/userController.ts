@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import UserServices from '../services/userService';
 
-const ERROR_MESSAGE = 'error interno';
+const ERROR_MESSAGE = 'Internal error';
 const userService = new UserServices;
 class UserController {
 
@@ -32,7 +32,7 @@ class UserController {
       const idUsuario = Number(req.params.id);
       const lancamentos = await userService.getLauchFromUser(idUsuario);
       if (lancamentos === false) {
-        return res.status(404).json({ message: 'Usuario não existente' });
+        return res.status(404).json({ message: 'User not found' });
       } 
       return res.status(200).json(lancamentos);
     } catch (err) {
@@ -45,9 +45,9 @@ class UserController {
       const idUsuario = Number(req.params.id);
       const user = await userService.deleteUserById(idUsuario);
       if (user === false) {
-        return res.status(404).json({ message: 'Usuario não existente' });
+        return res.status(404).json({ message: 'User not found' });
       } 
-      return res.status(200).json({ message: `Usuario com email: [${user.email}] deletado` });
+      return res.status(200).json({ message: `User with email: [${user.email}] deleted` });
     } catch (err) {
       return res.status(500).json({ message: ERROR_MESSAGE });
     }
@@ -59,7 +59,7 @@ class UserController {
       const idUsuario = Number(req.params.id);
       const user = await userService.updateUserById(idUsuario, nome);
       if (user === false) {
-        return res.status(404).json({ message: 'Usuario não existente' })
+        return res.status(404).json({ message: 'User not found' })
       }
       return res.status(200).json(user);
     } catch (err) {
