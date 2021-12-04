@@ -13,6 +13,7 @@ class LaunchService {
     const newLaunch = await launchModel.saveLauch(launch);
     return newLaunch;
   };
+
 };
 
 export default LaunchService;
