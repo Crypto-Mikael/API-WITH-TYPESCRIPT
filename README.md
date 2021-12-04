@@ -7,6 +7,7 @@ Esse projeto é uma API basica baseada em uma API já existente chamada <a href=
 - [O que foi desenvolvido](#o-que-foi-desenvolvido)
 - [Endpoints do projeto](#endpoints-do-projeto)
 - [Agradecimentos](#agradecimentos)
+- [Encontre-me](#encontre-me)
 
 
 Esse projeto tem como intuito aprender novas tecnologias e reforçar as já aprendidas sendo elas:
@@ -163,3 +164,11 @@ Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST
   "message": "User with email: [MiguelCampos@email.com] deleted"
 }
 ```
+
+## Agradecimentos
+
+Agredeço imensamente pela <a href="https://www.creativecode.art.br/">CreativeCode</a> pela iniciativa de começar esse projeto e pela toda equipe da <a href="https://www.betrybe.com/">Trybe</a> que vem me formando como um profissonal altamente competente.
+
+## Encontre-me
+[![Linkding](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miguel-campos-6b7243203/)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:1hamander@gmail.com)
