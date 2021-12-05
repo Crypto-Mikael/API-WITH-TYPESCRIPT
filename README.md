@@ -1,6 +1,6 @@
 # Boas vindas ao Repositorio do API com TypeScript!
 
-Esse projeto é uma API basica baseada em uma API já existente chamada <a href="https://github.com/sidneyroberto/julius-api">julius-api</a>, ela tem como intuito guardar informações de gastos de um usuario no cotidiano.
+Esse projeto é uma API basica baseada em uma API já existente chamada <a href="https://github.com/sidneyroberto/julius-api">julius-api</a>, ela tem como intuito guardar informações de gastos de um usuário no cotidiano.
 
 # Sumário
 
@@ -21,8 +21,8 @@ Esse projeto tem como intuito aprender novas tecnologias e reforçar as já apre
 
 ## O que foi desenvolvido
 
-Foi arquiteturado, uma API de CRUD de usuarios com laçamentos de gastos (com <a href="https://typeorm.io/#/">typeorm</a>). 
-Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST) que estarão conectados ao seu banco de dados local ou no docker.
+Foi arquitetado, uma API de CRUD de usuários com laçamentos de gastos (com <a href="https://typeorm.io/#/">typeorm</a>). 
+Para o Usuário foi desenvolvido alguns endpoints (seguindo o princípios do REST) que estarão conectados ao seu banco de dados local ou no docker.
 
 ## Endpoints do projeto
 
@@ -41,7 +41,7 @@ Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST
   "message": "Email already exists"
 }
 ```
-- Caso contrário, retornará um json com o usuario criado
+- Caso contrário, retornará um json com o usuário criado
 
 ```json
 {
@@ -55,7 +55,7 @@ Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST
 
 ![GETUSERS](https://user-images.githubusercontent.com/80548535/144721957-a6aa8c01-f4a0-490e-b2b7-9ec8788678e3.png)
 
-- Quando algum usuario existir o endpoint retornará o seguinte:
+- Quando algum usuário existir o endpoint retornará o seguinte:
 
 ```json
 [
@@ -114,7 +114,7 @@ Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST
 }
 ```
 
-- Caso contrário, retornará um json com o usuario com seus laçamentos
+- Caso contrário, retornará um json com o usuário com seus laçamentos
 
 ```json
 {
@@ -157,7 +157,7 @@ Para o Usuario foi desenvolvido alguns endpoints (seguindo o princípios do REST
   "message": "User not found"
 }
 ```
-- Caso contrário, retornará um json com o usuario com email do usuario deletado:
+- Caso contrário, retornará um json com o usuário com email do usuario deletado:
 
 ```json
 {
