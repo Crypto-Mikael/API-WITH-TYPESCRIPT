@@ -167,7 +167,7 @@ Para o Usuário foi desenvolvido alguns endpoints (seguindo o princípios do RES
 
 ## Agradecimentos
 
-Agredeço imensamente pela <a href="https://www.creativecode.art.br/">CreativeCode</a> pela iniciativa de começar esse projeto e pela toda equipe da <a href="https://www.betrybe.com/">Trybe</a> que vem me formando como um profissonal altamente competente.
+Agradeço imensamente pela <a href="https://www.creativecode.art.br/">CreativeCode</a> pela iniciativa de começar esse projeto e pela toda equipe da <a href="https://www.betrybe.com/">Trybe</a> que vem me formando como um profissonal altamente competente.
 
 ## Encontre-me
 [![Linkding](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miguel-campos-6b7243203/)
