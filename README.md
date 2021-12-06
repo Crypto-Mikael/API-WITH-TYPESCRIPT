@@ -144,7 +144,31 @@ Para o Usuário foi desenvolvido alguns endpoints (seguindo o princípios do RES
 }
 ```
 
-5 - Requisição ao endpoint DELETE `/usuario/:ID`
+5 - Requisição ao endpoint PUT `/usuario/:ID`
+
+![UPDATEUSER](https://user-images.githubusercontent.com/80548535/144889901-1d654dc3-433f-47b0-82b3-2cb0bbe20449.png)
+
+#### Os seguintes pontos são avaliados:
+
+- O campo `nome` deverá existir, não estar em branco e ser um tipo string;
+- Quando o parametro `ID` não existir o endpoint retornará o seguinte:
+
+```json
+{
+  "message": "User not found"
+}
+```
+- Caso contrário, retornará um json com o usuário com email do usuario deletado:
+
+```json
+{
+  "nome": "NOME MODIFICADO",
+  "email": "GabrielRodrigues@email.com",
+  "id": 11
+}
+```
+
+6 - Requisição ao endpoint DELETE `/usuario/:ID`
 
 ![DELETEUSER](https://user-images.githubusercontent.com/80548535/144722710-a9154b9a-d00b-4eb2-b170-c69d9ec6b9d4.png)
 
